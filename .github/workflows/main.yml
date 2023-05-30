@@ -1,13 +1,13 @@
 name: Main Taski Workflow
-  on:
-    push:
-      branches:
-        - main
-  jobs:
-    check-out-and-print-tree:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Check out repository code
-	  uses: actions/checkout@v3
-	- name: Check out directory tree
-	  run: tree .
+on:
+  push:
+    branches:
+      - main
+jobs:
+  check-out-and-print-tree:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+      uses: actions/checkout@v3
+      - name: Check out directory tree
+      run: tree .
